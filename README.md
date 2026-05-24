@@ -17,6 +17,7 @@ This assignment builds on Homework 5 by adding full database persistence, reposi
 - API starts at: http://localhost:8080
 
 To open the H2 console: http://localhost:8080/h2-console
+
 Use: 
   - JDBC URL: jdbc:h2:mem:taskboarddb
   - Username: sa 
@@ -44,21 +45,21 @@ Use:
    Deletes a task permanently (not soft delete in this assignment).
 
 6. Get Completed Tasks
-   GET /api/tasks/completed
+    GET /api/tasks/completed
 
 7. Get Incomplete Tasks
-   GET /api/tasks/incomplete
+    GET /api/tasks/incomplete
 
 8. Filter by Priority
-   GET /api/tasks/priority/{priority}  
-   Example: /api/tasks/priority/HIGH
+    GET /api/tasks/priority/{priority}
+    Example: /api/tasks/priority/HIGH
 
 9. Search Tasks (JPQL @Query)
-   GET /api/tasks/search?keyword=...  
-   Searches title + description (case‑insensitive).
+    GET /api/tasks/search?keyword=...
+    Searches title + description (case‑insensitive).
 
 10. Pagination + Sorting
-    GET /api/tasks/paginated?page=0&size=5&sortBy=title  
+    GET /api/tasks/paginated?page=0&size=5&sortBy=title
     Returns a Page<Task> with metadata:
     - totalElements 
     - totalPages 
