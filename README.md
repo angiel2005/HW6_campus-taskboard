@@ -10,20 +10,6 @@ This assignment builds on Homework 5 by adding full database persistence, reposi
 - Maven 
 - Postman (for testing)
 
-## Project Structure
-### Code
-src/
-└── main/
-├── java/edu.brooklyn.cisc3130.taskboard
-│     ├── controller      → REST endpoints
-│     ├── service         → business logic + @Transactional
-│     ├── repository      → JPA repository with custom queries
-│     ├── model           → Task entity with JPA annotations
-│     └── data            → optional DataInitializer
-└── resources/
-├── application.properties
-└── (H2 console enabled)
-
 ## How to Run the Project
 - Clone or download the project 
 - Open in IntelliJ or VS Code 
