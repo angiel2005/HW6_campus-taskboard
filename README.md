@@ -63,18 +63,16 @@ Use:
    GET /api/tasks/incomplete
 
 10. Filter by Priority
-
-   GET /api/tasks/priority/{priority}
-
-   Example: /api/tasks/priority/HIGH
+    GET /api/tasks/priority/{priority}
+    Example: /api/tasks/priority/HIGH
 
 11. Search Tasks (JPQL @Query)
 
-   GET /api/tasks/search?keyword=...
+GET /api/tasks/search?keyword=...
 
    Searches title + description (case‑insensitive).
 
-11. Pagination + Sorting
+12. Pagination + Sorting
 
     GET /api/tasks/paginated?page=0&size=5&sortBy=title
 
