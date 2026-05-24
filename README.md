@@ -24,59 +24,25 @@ Use:
   - Password: (empty)
 
 ## API Endpoints
-1. Create a Task
+1. Create a Task <br>POST /api/tasks <br>Creates a new task with validation on title and description.
 
-   POST /api/tasks  
+2. Get All Tasks <br>GET /api/tasks <br>Returns all tasks stored in the database.
 
-   Creates a new task with validation on title and description.
+3. Get Task by ID <br>GET /api/tasks/{id} <br>Returns a single task or 404 if not found.
 
-3. Get All Tasks
+4. Update a Task <br>PUT /api/tasks/{id} <br>Updates title, description, completed status, and priority.
 
-   GET /api/tasks  
+5. Delete a Task <br>DELETE /api/tasks/{id} <br>Deletes a task permanently (not soft delete in this assignment).
 
-   Returns all tasks stored in the database.
+6. Get Completed Tasks <br>GET /api/tasks/completed
 
-4. Get Task by ID
+7. Get Incomplete Tasks <br>GET /api/tasks/incompleted
 
-   GET /api/tasks/{id}  
+8. Filter by Priority <br>GET /api/tasks/priority/{priority} <br>Example: /api/tasks/priority/HIGH
 
-   Returns a single task or 404 if not found.
+9. Search Tasks (JPQL @Query) <br>GET /api/tasks/search?keyword=... <br>Searches title + description (case‑insensitive).
 
-6. Update a Task
-
-   PUT /api/tasks/{id}  
-
-   Updates title, description, completed status, and priority.
-
-7. Delete a Task
-
-   DELETE /api/tasks/{id}  
-
-   Deletes a task permanently (not soft delete in this assignment).
-
-8. Get Completed Tasks
-
-   GET /api/tasks/completed
-
-9. Get Incomplete Tasks
-
-   GET /api/tasks/incomplete
-
-10. Filter by Priority
-    GET /api/tasks/priority/{priority}
-    Example: /api/tasks/priority/HIGH
-
-11. Search Tasks (JPQL @Query)
-
-GET /api/tasks/search?keyword=...
-
-   Searches title + description (case‑insensitive).
-
-12. Pagination + Sorting
-
-    GET /api/tasks/paginated?page=0&size=5&sortBy=title
-
-    Returns a Page<Task> with metadata:
+10. Pagination + Sorting <br>GET /api/tasks/paginated?page=0&size=5&sortBy=title <br>Returns a Page<Task> with metadata:
     - totalElements 
     - totalPages 
     - size 
