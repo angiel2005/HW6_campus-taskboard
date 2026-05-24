@@ -1,4 +1,4 @@
-# Campus Task Board API — Homework 6
+# HW6 - Campus Task Board API
 This assignment builds on Homework 5 by adding full database persistence, repository queries, pagination, search, and new filtering endpoints. The goal of this assignment was to learn how to use JPA entities, repositories, custom query methods, and H2 database integration while keeping the API clean and easy to test.
 
 ## Technologies Used
