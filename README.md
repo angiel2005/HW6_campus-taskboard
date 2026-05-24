@@ -25,41 +25,59 @@ Use:
 
 ## API Endpoints
 1. Create a Task
+
    POST /api/tasks  
+
    Creates a new task with validation on title and description.
 
-2. Get All Tasks
+3. Get All Tasks
+
    GET /api/tasks  
+
    Returns all tasks stored in the database.
 
-3. Get Task by ID
+4. Get Task by ID
+
    GET /api/tasks/{id}  
+
    Returns a single task or 404 if not found.
 
-4. Update a Task
+6. Update a Task
+
    PUT /api/tasks/{id}  
+
    Updates title, description, completed status, and priority.
 
-5. Delete a Task
+7. Delete a Task
+
    DELETE /api/tasks/{id}  
+
    Deletes a task permanently (not soft delete in this assignment).
 
-6. Get Completed Tasks
-    GET /api/tasks/completed
+8. Get Completed Tasks
 
-7. Get Incomplete Tasks
-    GET /api/tasks/incomplete
+   GET /api/tasks/completed
 
-8. Filter by Priority
-    GET /api/tasks/priority/{priority}
-    Example: /api/tasks/priority/HIGH
+9. Get Incomplete Tasks
 
-9. Search Tasks (JPQL @Query)
-    GET /api/tasks/search?keyword=...
-    Searches title + description (case‑insensitive).
+   GET /api/tasks/incomplete
 
-10. Pagination + Sorting
+10. Filter by Priority
+
+   GET /api/tasks/priority/{priority}
+
+   Example: /api/tasks/priority/HIGH
+
+11. Search Tasks (JPQL @Query)
+
+   GET /api/tasks/search?keyword=...
+
+   Searches title + description (case‑insensitive).
+
+11. Pagination + Sorting
+
     GET /api/tasks/paginated?page=0&size=5&sortBy=title
+
     Returns a Page<Task> with metadata:
     - totalElements 
     - totalPages 
